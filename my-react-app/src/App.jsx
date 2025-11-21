@@ -1,7 +1,17 @@
 import './App.css';
 
 function Square({value}){
-  return<button className="square">{value}</button>
+  function handleClick(){
+    console.log("clicked!!");
+  }
+  return(
+  <button
+   className="square"
+   onClick={handleClick}
+   >
+    {value}
+    </button>
+  );
 }
 function Board() {
   return (
@@ -29,7 +39,7 @@ export default function App() {
   return (
     <div>
       <h1>Tic Tac Toe</h1>
-      <Square />
+      <Board />
     </div>
   );
 }
