@@ -18,8 +18,13 @@ function Board() {
 
   function handleClick(i) {
     const nextSquares = squares.slice();
-    nextSquares[i] = "X";
+    if(xIsNext){
+      nextSquares[i]="X"; 
+    }else{
+      nextSquares[i]="0"; 
+    }
     setSquares(nextSquares);
+    setXIsNext(!xIsNext); 
   }
 
   return (
